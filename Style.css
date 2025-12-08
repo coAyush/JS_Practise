@@ -24,11 +24,16 @@ form{
     width : 300px;
     border : 1px solid rgba(3, 38, 49, 0.24);
 }
+<<<<<<< HEAD
 #profileImage{
+=======
+#Profilepic{
+>>>>>>> 66c790903713cb65678593379c74a29200825828
     display: inline-block;
     height : 100px;
     width : 100px;
     border-radius: 50%;
+<<<<<<< HEAD
 }
 
 #container{
@@ -48,4 +53,6 @@ form{
 .lt{
     text-decoration: line-through;
     font-weight: bold;
+=======
+>>>>>>> 66c790903713cb65678593379c74a29200825828
 }

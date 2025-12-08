@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 /*let inputs =document.querySelectorAll("input");
 let button =document.querySelector("button");
 
 let op=document.querySelector("#output");
 let o=document.querySelectorAll(".Display");
+=======
+let inputs =document.querySelectorAll("input");
+let button =document.querySelector("button");
+
+let op=document.querySelector("#output");
+let o=document.querySelectorAll("#Display");
+>>>>>>> 66c790903713cb65678593379c74a29200825828
 let pr=document.querySelector("#profileImage");
 op.style.visibility="hidden";
 button.addEventListener("click",function(inp){
@@ -11,6 +19,7 @@ button.addEventListener("click",function(inp){
      o[0].textContent=inputs[0].value;
      o[1].textContent=inputs[1].value;  
      pr.setAttribute("src",inputs[2].value);
+<<<<<<< HEAD
 });*/
 let mo=document.querySelector("#container");
 mo.addEventListener("mouseover",()=>{
@@ -18,4 +27,6 @@ mo.addEventListener("mouseover",()=>{
 });
 mo.addEventListener("mouseout",()=>{
     mo.style.backgroundColor="pink";
+=======
+>>>>>>> 66c790903713cb65678593379c74a29200825828
 });
