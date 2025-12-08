@@ -84,3 +84,11 @@ console.log(ch); // true
 fullname=["John","F.","Kennedy"];
 [fname,,lname]=fullname;
 console.log(fname+" "+lname); // John
+
+//merge two arrays 
+//DONE USING SPREAD OPERATOR
+arr1=[10,20,30];
+arr2=[40,50,60];
+let newarray=new Array(arr1.length+arr2.length);
+newarray=[...arr1,...arr2];
+console.log(newarray); // [10, 20, 30, 40, 50, 60]
