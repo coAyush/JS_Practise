@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theme Toggle</title>
+  <style>
+    /* Default Light Theme */
+:root {
+    --bg-color: #ffffff;
+    --toggle-bg: #ccc;
+    --toggle-active-bg: #4e89ff;
+    --circle-bg: #ffffff;
+}
+
+/* Dark Mode Variables (You will toggle this class with JS) */
+.dark-theme {
+    --bg-color: #222222;
+    --toggle-bg: #555;
+    --toggle-active-bg: #007bff;
+    --circle-bg: #000000;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    background: var(--bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease;
+}
+
+/* Toggle Container */
+.toggle-container {
+    position: relative;
+}
+
+/* Hide the default checkbox */
+#theme-toggle {
+    display: none;
+}
+
+/* Track */
+.toggle-label {
+    width: 60px;
+    height: 30px;
+    background: var(--toggle-bg);
+    border-radius: 30px;
+    position: relative;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    display: inline-block;
+}
+
+/* Circle */
+.toggle-circle {
+    width: 24px;
+    height: 24px;
+    background: var(--circle-bg);
+    border-radius: 50%;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    transition: transform 0.3s ease;
+}
+
+/* When checkbox is checked -> move circle */
+#theme-toggle:checked + .toggle-label {
+    background: var(--toggle-active-bg);
+}
+
+#theme-toggle:checked + .toggle-label .toggle-circle {
+    transform: translateX(30px);
+}
+  </style>>
+</head>
+<body>
+
+    <!-- Theme Toggle Switch -->
+    <div class="toggle-container">
+        <input type="checkbox" id="theme-toggle" aria-label="Toggle Theme">
+        <label for="theme-toggle" class="toggle-label">
+            <span class="toggle-circle"></span>
+        </label>
+    </div>
+    <Script src="script.js"></Script>
+</body>
+</html>
