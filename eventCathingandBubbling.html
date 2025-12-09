@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #c1{
+        height: 500px;
+        width: 500px;
+        background-color: red;
+    }
+     #c2{
+        height: 250px;
+        width: 250px;
+        background-color: green;
+    }
+     #c3{
+        height: 75px;
+        width: 75px;
+        background-color: violet;
+    }
+</style>
+<body>
+    <div id="c1">
+        <div id="c2">
+            <div id="c3">
+
+            </div>
+        </div>
+    </div>
+    <script>
+        let divc1 = document.querySelector("#c1");
+        let divc2 = document.querySelector("#c2");
+        let divc3 = document.querySelector("#c3");
+        divc1.addEventListener("click",()=>{
+            console.log("parent");
+        },true);
+          divc2.addEventListener("click",()=>{
+            console.log("1st child");
+        });
+          divc3.addEventListener("click",()=>{
+            console.log("2nd child");
+        },true);
+    </script>
+</body>
+
+</html>
