@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            width: 250px;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            gap: 2px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+      <textarea id="txt"></textarea>
+      <label id="l">Character count :<span id="count"></span></label>
+    </div>
+    <script defer>
+        let txt=document.querySelector("#txt");
+        let count=document.querySelector("#count");
+        txt.addEventListener("input",(event)=>{
+         let length=String(txt.value).length;
+         count.textContent=length;
+        })
+    </script> 
+</body>
+</html>

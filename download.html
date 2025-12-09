@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Download Progress</title>
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: #1a1a1a;
+        font-family: Arial, sans-serif;
+    }
+
+    .container {
+        width: 350px;
+        background: #222;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(255,255,255,0.1);
+        text-align: center;
+        color: #fff;
+    }
+
+    h2 {
+        margin-bottom: 15px;
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    .progress-bar {
+        width: 100%;
+        height: 12px;
+        background: #444;
+        border-radius: 10px;
+        overflow: hidden;
+        margin: 15px 0;
+    }
+
+    .progress {
+        width: 0%;
+        height: 100%;
+        background: limegreen;
+        transition: width .3s ease-in-out;
+    }
+
+    .percent {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        background: dodgerblue;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        color: white;
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    .btn:hover {
+        background: rgb(10, 113, 210);
+    }
+</style>
+</head>
+<body>
+    
+<div class="container">
+    <h2>File Download</h2>
+
+    <div class="percent">0%</div>
+
+    <div class="progress-bar">
+        <div class="progress"></div>
+    </div>
+
+    <button class="btn">Start Download</button>
+</div>
+ <script src="download.js" defer></script>
+</body>
+</html>

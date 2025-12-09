@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let c=setTimeout(()=>{
+            console.log("hi to setTimeout")
+        },1500);
+        //clearTimeout(c);//see giving clearTimeout means nothing willl be displayed on console asetTimeout says to wait for 1.5secs here for printing and before that that cleartimeout clears the the thing so noting to be displayed here
+        //lets make a countdown clock
+        let t=10;
+        let g=setInterval(()=>{
+            if(t>=0){
+            console.log(t);
+            }else{
+                clearInterval(g);
+            }
+            t--;
+        },1000);
+    </script>
+</body>
+</html>
