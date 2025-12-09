@@ -15,6 +15,7 @@ btn.addEventListener("click", () => {
     if (pr == 100) {
         btn.textContent = "Download finished";
         percent.textContent = `${pr}%`
+        clearInterval(st);
 
     }
 }, (seconds * 1000) / 100);
