@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="box">
+    <script>
+        let box=document.querySelector("#box");
+        let a=50,l=0,r=0;
+        let label=document.createElement("label");
+        document.body.append(label);
+        box.addEventListener("input",(val)=>{
+            l=box.value.length;
+            r=a-l;
+            if(r<=0){
+                box.value=box.value.substring(0,a);
+            }
+            label.textContent=`Remaining :${r}`;
+        })
+
+    </script>
+</body>
+</html>

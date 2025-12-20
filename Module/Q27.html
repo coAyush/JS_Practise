@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            gap:5px;
+        }
+    </style>
+</head>
+<body>
+    <textarea id="text"></textarea>
+    <script>
+        let txt = document.querySelector("#text");
+        let allowed = 50;
+        let l = 0, remains = 0;
+        let lab = document.createElement("label");
+        document.body.append(lab);
+        lab.textContent = `Remainin characters allowed${allowed}`;
+        txt.addEventListener("input", (val) => {
+            l = txt.textLength;
+            remains = allowed - l;
+            if(remains<0){
+                txt.value=txt.value.substring(0,allowed);
+                lab.textContent="Out of length";
+               return;
+            }
+            lab.textContent = `Remainin characters left${remains}`;
+        })
+
+        
+    </script>
+</body>
+
+</html>

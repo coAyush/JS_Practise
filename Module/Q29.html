@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Registration</title>
+</head>
+<body>
+
+<form id="frm" onsubmit="return validate()">
+    <strong>FName:</strong>
+    <input type="text" id="fname"><br><br>
+
+    <strong>LName:</strong>
+    <input type="text" id="lname"><br><br>
+
+    <strong>Password:</strong>
+    <input type="text" id="pass"><br><br>
+
+    <button type="submit">Submit</button>
+</form>
+
+<script>
+let fname = document.querySelector("#fname");
+let lname = document.querySelector("#lname");
+let pass  = document.querySelector("#pass");
+
+let nameregex = /^[A-Za-z]+$/;
+let passRegex = /^(?=.*[A-Za-z])(?=.*\d).{8,}$/;
+
+function validate() {
+
+    // First name cannot be empty
+    if (fname.value.length === 0) {
+        alert("First name cannot be empty");
+        return false;
+    }
+
+    // First name alphabets only
+    if (!nameregex.test(fname.value)) {
+        alert("Invalid first name");
+        return false;
+    }
+
+    // Last name optional, but alphabets only if entered
+    if (lname.value.length > 0 && !nameregex.test(lname.value)) {
+        alert("Invalid last name");
+        return false;
+    }
+
+    // Password validation
+    if (!passRegex.test(pass.value)) {
+        alert("Password must be at least 8 characters and contain letters and a digit");
+        return false;
+    }
+
+    alert("Form validated successfully ✅");
+    return true;
+}
+</script>
+
+</body>
+</html>

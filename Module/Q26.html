@@ -1,0 +1,49 @@
+<!--26. Write JavaScript code to dynamically add a set of buttons to a page, each with a different label. When
+a button is clicked, it should display an alert with its label.-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+
+        .btn {
+            height: 70px;
+            width: 100px;
+            border-radius: 20px;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+
+    <script>
+        let btn;
+        let labels = ["hello", "click", "here"];
+        for (let i = 0; i < 3; i++) {
+            btn = document.createElement("button");
+            btn.classList.add("btn");
+            btn.textContent = labels[i];
+            btn.value = labels[i];
+            btn.setAttribute("aria-label", labels[i]);
+            document.body.append(btn);
+        }
+    let buttons=document.querySelectorAll(".btn");
+    buttons.forEach((value)=>{
+        value.addEventListener("click",(event)=>{
+            alert(event.target.value);
+        })
+    })
+    </script>
+</body>
+
+</html>

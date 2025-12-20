@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <select id="dropdown">
+        <option disabled>Select</option>
+    </select>
+    <script>
+        let arr = ["Apple", "Mango", "Peach"]
+        let dropdown = document.querySelector("#dropdown");
+
+        arr.forEach((val) => {
+            let option = document.createElement("option");
+            option.value=val
+            option.textContent = val;
+            dropdown.appendChild(option)
+        })
+        dropdown.addEventListener("change", (event) => {
+            alert(event.target.value)
+        })
+    </script>
+</body>
+
+</html>
